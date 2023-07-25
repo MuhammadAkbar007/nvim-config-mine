@@ -94,16 +94,15 @@ _G.packer_plugins = {
     path = "/home/akbar/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  ["dracula.nvim"] = {
+    loaded = true,
+    path = "/home/akbar/.local/share/nvim/site/pack/packer/start/dracula.nvim",
+    url = "https://github.com/Mofiqul/dracula.nvim"
+  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/home/akbar/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
-  },
-  ["github-nvim-theme"] = {
-    config = { "\27LJ\2\ní\1\0\0\a\0\14\0\0196\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\t\0005\3\3\0005\4\4\0005\5\5\0004\6\0\0=\6\6\5=\5\a\4=\4\b\3=\3\n\2B\0\2\0016\0\v\0009\0\f\0'\2\r\0B\0\2\1K\0\1\0'colorscheme github_dark_colorblind\bcmd\bvim\foptions\1\0\0\vdarken\rsidebars\tlist\1\0\1\venable\2\1\0\1\vfloats\1\1\0\2\16transparent\2\17dim_inactive\2\nsetup\17github-theme\frequire\0" },
-    loaded = true,
-    path = "/home/akbar/.local/share/nvim/site/pack/packer/start/github-nvim-theme",
-    url = "https://github.com/projekt0n/github-nvim-theme"
   },
   ["mason-lspconfig.nvim"] = {
     loaded = true,
@@ -158,10 +157,6 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: github-nvim-theme
-time([[Config for github-nvim-theme]], true)
-try_loadstring("\27LJ\2\ní\1\0\0\a\0\14\0\0196\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\t\0005\3\3\0005\4\4\0005\5\5\0004\6\0\0=\6\6\5=\5\a\4=\4\b\3=\3\n\2B\0\2\0016\0\v\0009\0\f\0'\2\r\0B\0\2\1K\0\1\0'colorscheme github_dark_colorblind\bcmd\bvim\foptions\1\0\0\vdarken\rsidebars\tlist\1\0\1\venable\2\1\0\1\vfloats\1\1\0\2\16transparent\2\17dim_inactive\2\nsetup\17github-theme\frequire\0", "config", "github-nvim-theme")
-time([[Config for github-nvim-theme]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

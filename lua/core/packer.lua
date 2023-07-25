@@ -28,26 +28,29 @@ return require('packer').startup(function(use)
 	  },
   }
 
-  use({
-	  'projekt0n/github-nvim-theme',
-	  config = function()
-		  require('github-theme').setup({
-			  options = {
-				transparent = true,
-				dim_inactive = true,
-				darken = {                 -- Darken floating windows and sidebar-like windows
-				floats = false,
-				sidebars = {
-					enable = true,
-					list = {},             -- Apply dark background to specific windows
-				},
-			},
-			  }
-		  })
+  -- Using Packer:
+  use 'Mofiqul/dracula.nvim'
 
-		  vim.cmd('colorscheme github_dark_colorblind')
-	  end
-  })
+--  use({
+--	  'projekt0n/github-nvim-theme',
+--	  config = function()
+--		  require('github-theme').setup({
+--			  options = {
+--				transparent = true,
+--				dim_inactive = true,
+--				darken = {                 -- Darken floating windows and sidebar-like windows
+--				floats = false,
+--				sidebars = {
+--					enable = true,
+--					list = {},             -- Apply dark background to specific windows
+--				},
+--			},
+--			  }
+--		  })
+--
+--		  vim.cmd('colorscheme github_dark_colorblind')
+--	  end
+--  })
 
   use("hrsh7th/nvim-cmp")
   use("hrsh7th/cmp-buffer")
