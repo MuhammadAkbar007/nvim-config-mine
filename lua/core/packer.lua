@@ -15,6 +15,9 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 
+  use("windwp/nvim-autopairs")
+  use("windwp/nvim-ts-autotag")
+
   use 'nvim-tree/nvim-web-devicons'
   use {
 	  'nvim-telescope/telescope.nvim', tag = '0.1.2',
@@ -64,6 +67,22 @@ return require('packer').startup(function(use)
   use("williamboman/mason-lspconfig.nvim")
 
   use("neovim/nvim-lspconfig")
+  use("hrsh7th/cmp-nvim-lsp")
+  use({
+	  "glepnir/lspsaga.nvim",
+	  branch = "main",
+	  requires = {
+		  { "nvim-tree/nvim-web-devicons" },
+		  { "nvim-treesitter/nvim-treesitter" },
+	  },
+  }) -- enhanced lsp uis
+  use("mfussenegger/nvim-jdtls")
+  use("onsails/lspkind.nvim")
+
+  use("jose-elias-alvarez/null-ls.nvim")
+  use("jayp0521/mason-null-ls.nvim")
+
+  use("lewis6991/gitsigns.nvim")
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
