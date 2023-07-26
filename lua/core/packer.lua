@@ -28,6 +28,8 @@ return require('packer').startup(function(use)
 	  },
   }
 
+ use("nvim-lualine/lualine.nvim")
+
   -- Using Packer:
   use 'Mofiqul/dracula.nvim'
 
@@ -37,9 +39,7 @@ return require('packer').startup(function(use)
 --		  require('github-theme').setup({
 --			  options = {
 --				transparent = true,
---				dim_inactive = true,
---				darken = {                 -- Darken floating windows and sidebar-like windows
---				floats = false,
+--				dim_inactive = true, darken = {                 -- Darken floating windows and sidebar-like windows floats = false,
 --				sidebars = {
 --					enable = true,
 --					list = {},             -- Apply dark background to specific windows
@@ -62,6 +62,7 @@ return require('packer').startup(function(use)
 
   use("williamboman/mason.nvim")
   use("williamboman/mason-lspconfig.nvim")
+
   use("neovim/nvim-lspconfig")
 
   -- Automatically set up your configuration after cloning packer.nvim
