@@ -1,14 +1,3 @@
-vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
-vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
-vim.keymap.set("n", "<silent><leader>1", "<Cmd>BufferLineGoToBuffer 1<CR>")
-vim.keymap.set("n", "<silent><leader>2", "<Cmd>BufferLineGoToBuffer 2<CR>")
-vim.keymap.set("n", "<silent><leader>3", "<Cmd>BufferLineGoToBuffer 3<CR>")
-vim.keymap.set("n", "<silent><leader>4", "<Cmd>BufferLineGoToBuffer 4<CR>")
-vim.keymap.set("n", "<silent><leader>5", "<Cmd>BufferLineGoToBuffer 5<CR>")
-vim.keymap.set("n", "<silent><leader>6", "<Cmd>BufferLineGoToBuffer 6<CR>")
-vim.keymap.set("n", "<silent><leader>7", "<Cmd>BufferLineGoToBuffer 7<CR>")
-vim.keymap.set("n", "<silent><leader>8", "<Cmd>BufferLineGoToBuffer 8<CR>")
-vim.keymap.set("n", "<silent><leader>9", "<Cmd>BufferLineGoToBuffer 9<CR>")
-vim.keymap.set("n", "<silent>[b", ":BufferLineCycleNext<CR>")
-vim.keymap.set("n", "<silent>b]", ":BufferLineCyclePrev<CR>")
+-- setting key maps
+vim.g.mapleader = " " -- set leader key
+vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>") -- toggles file explorer nvimTree

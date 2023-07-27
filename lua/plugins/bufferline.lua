@@ -1,5 +1,6 @@
-require("bufferline").setup{
-	options = ({
+-- bufferline setting up
+require("bufferline").setup({
+	options = {
 		numbers = "ordinal",
 		hover = {
 			enabled = true,
@@ -12,16 +13,17 @@ require("bufferline").setup{
 				text_align = "left",
 				separator = true,
 				highlight = "Directory",
-				text = "Akbar Ahmad ibn Akrom",
---				text = function()
---					return vim.fn.getcwd()
---				end,
+				text = "📁 Akbar Ahmad ibn Akrom",
+				--				text = function()
+				--					return vim.fn.getcwd()
+				--				end,
 			},
 		},
-	}),
-}
+	},
+})
 
-vim.cmd[[
+-- bufferline keymaps
+vim.cmd([[
 nnoremap <silent><leader>1 <Cmd>BufferLineGoToBuffer 1<CR>
 nnoremap <silent><leader>2 <Cmd>BufferLineGoToBuffer 2<CR>
 nnoremap <silent><leader>3 <Cmd>BufferLineGoToBuffer 3<CR>
@@ -33,4 +35,5 @@ nnoremap <silent><leader>8 <Cmd>BufferLineGoToBuffer 8<CR>
 nnoremap <silent><leader>9 <Cmd>BufferLineGoToBuffer 9<CR>
 nnoremap <silent><TAB> :BufferLineCycleNext<CR>
 nnoremap <silent><S-TAB> :BufferLineCyclePrev<CR>
-]]
+]])
+vim.keymap.set("n", "<leader>w", ":bd<CR>")

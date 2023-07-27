@@ -1,12 +1,13 @@
-local opt = vim.opt
+-- Global options of Neovim
+local opt = vim.opt -- for simplicity
 
 -----------------------------------------------------------
 -- General
 -----------------------------------------------------------
-opt.mouse = 'a' -- enable mouse support
-opt.clipboard = 'unnamedplus' -- enable system clipboard
+opt.mouse = "a" -- enable mouse support
+opt.clipboard = "unnamedplus" -- enable system clipboard
 opt.swapfile = false -- don't use swapfile
-opt.completeopt = 'menuone,noinsert,noselect'  -- autocomplete options
+opt.completeopt = "menuone,noinsert,noselect" -- autocomplete options
 
 -----------------------------------------------------------
 -- Neovim UI
@@ -20,6 +21,6 @@ opt.termguicolors = true -- enable 24-bit RGB colors
 -----------------------------------------------------------
 -- Tabs, indent
 -----------------------------------------------------------
-opt.tabstop = 4  -- 1 tab == 4 spaces
-opt.smartindent = true  -- autoindent new lines
+opt.tabstop = 4 -- 1 tab == 4 spaces
+opt.smartindent = true -- autoindent new lines
 opt.shiftwidth = 4 -- Shift 4 spaces when tab

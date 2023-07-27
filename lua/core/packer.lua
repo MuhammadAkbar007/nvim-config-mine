@@ -1,3 +1,4 @@
+-- Packer bootstrap
 local ensure_packer = function()
 	local fn = vim.fn
 	local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
@@ -12,19 +13,28 @@ end
 local packer_bootstrap = ensure_packer()
 
 return require("packer").startup(function(use)
+	-- install packer
 	use("wbthomason/packer.nvim")
+
+	-- syntax highlighting in all file formats
 	use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
 
+	-- autopairs
 	use("windwp/nvim-autopairs")
 	use("windwp/nvim-ts-autotag")
 
+	-- icons pack
 	use("nvim-tree/nvim-web-devicons")
+
+	-- fuzzy finder
 	use({
 		"nvim-telescope/telescope.nvim",
 		tag = "0.1.2",
 		-- or                            , branch = '0.1.x',
 		requires = { { "nvim-lua/plenary.nvim" } },
 	})
+
+	-- file explorer tree
 	use({
 		"nvim-tree/nvim-tree.lua",
 		requires = {
@@ -32,11 +42,13 @@ return require("packer").startup(function(use)
 		},
 	})
 
+	-- line written in lua
 	use("nvim-lualine/lualine.nvim")
 
-	-- Using Packer:
+	-- Dracula theme
 	use("Mofiqul/dracula.nvim")
 
+	-- Github theme
 	--  use({
 	--	  'projekt0n/github-nvim-theme',
 	--	  config = function()
@@ -56,17 +68,17 @@ return require("packer").startup(function(use)
 	--	  end
 	--  })
 
+	-- snippets
 	use("hrsh7th/nvim-cmp")
 	use("hrsh7th/cmp-buffer")
 	use("hrsh7th/cmp-path")
 	use("L3MON4D3/LuaSnip")
-
 	use("saadparwaiz1/cmp_luasnip")
 	use("rafamadriz/friendly-snippets")
 
+	-- LSP
 	use("williamboman/mason.nvim")
 	use("williamboman/mason-lspconfig.nvim")
-
 	use("neovim/nvim-lspconfig")
 	use("hrsh7th/cmp-nvim-lsp")
 	use({
@@ -79,12 +91,13 @@ return require("packer").startup(function(use)
 	}) -- enhanced lsp uis
 	use("mfussenegger/nvim-jdtls")
 	use("onsails/lspkind.nvim")
-
 	use("jose-elias-alvarez/null-ls.nvim")
 	use("jayp0521/mason-null-ls.nvim")
 
---	use("lewis6991/gitsigns.nvim")
+	-- git integration signs
+	--	use("lewis6991/gitsigns.nvim")
 
+	-- multiple tabs
 	use({ "akinsho/bufferline.nvim", tag = "*", requires = "nvim-tree/nvim-web-devicons" })
 
 	-- Automatically set up your configuration after cloning packer.nvim
